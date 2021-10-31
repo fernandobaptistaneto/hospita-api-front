@@ -18,3 +18,25 @@
     height: 10%;
 }
 
+.container {
+    height: 85%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+i {
+    padding-right: 0.6rem;
+}
+
+
+.toggle-menu {
+    top: 0;
+    width: 100%;
+    display: flexbox;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height:100vh;
+    width: 100vh;
+}
+

@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  showFiller = false;
-  
   constructor() { }
 
   ngOnInit(): void {
