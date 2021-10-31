@@ -1,0 +1,20 @@
+.spacer{
+    padding: 0.3rem;
+}
+
+.toggle-button{
+    display: flex;
+    min-width: 35px;
+    min-height: 35px;
+}
+
+
+.header-text{
+    color: white;
+}
+
+.header{
+    background-color: midnightblue;
+    height: 10%;
+}
+
