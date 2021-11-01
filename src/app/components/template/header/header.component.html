@@ -1,37 +1,40 @@
-  <mat-toolbar color="primary" class="header">
-    <mat-toolbar-row>
-      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span class="spacer"></span>
-      <span class="header-text">My Fusion</span>
-    </mat-toolbar-row>
-  </mat-toolbar>
+<!--Header-->
+<mat-toolbar color="primary" class="header">
+  <mat-toolbar-row>
+    <button
+      mat-icon-button
+      (click)="sidenav.toggle()"
+      fxShow="true"
+      fxHide.gt-sm
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="spacer"></span>
+    <span class="header-text">My Fusion</span>
+  </mat-toolbar-row>
+</mat-toolbar>
 
-  <mat-sidenav-container fxFlexFill class="container">
-    <mat-sidenav #sidenav mode="side" opened>
-      <mat-nav-list>
+<!--MENU-->
+<mat-sidenav-container fxFlexFill class="container">
+  <mat-sidenav #sidenav mode="side" opened>
+    <mat-nav-list>
+      <a routerLink="" mat-list-item>
+        <mat-icon>home</mat-icon>
+        Home
+      </a>
+      <a href="#" mat-list-item>
+        <mat-icon>assignment</mat-icon>
+        Autorizações</a>
         <a href="#" mat-list-item>
-          <mat-icon>notifications</mat-icon>
-          Notifications
-        </a>
-        <a href="#" mat-list-item>
-          <mat-icon>message</mat-icon>
-          Messages</a>
-        <a href="#" mat-list-item>
-          <mat-icon>account_box</mat-icon>
-          My Account
-        </a>
-        <a href="#" mat-list-item>
-          <mat-icon>lock</mat-icon>
-          My Account
-        </a>
-        <a (click)="sidenav.toggle()" mat-list-item>
-          <mat-icon>close</mat-icon> Close
-        </a>
-      </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content fxFlexFill>
-      Main content
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+          <mat-icon>paid</mat-icon>
+          Repasse Médico
+        </a>  
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!--Corpo NAV-->
+  <mat-sidenav-content fxFlexFill>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+  
+</mat-sidenav-container>
