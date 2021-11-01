@@ -1,19 +1,19 @@
-.spacer{
+.spacer {
     padding: 0.3rem;
 }
 
-.toggle-button{
+.toggle-button {
     display: flex;
     min-width: 35px;
     min-height: 35px;
 }
 
 
-.header-text{
+.header-text {
     color: white;
 }
 
-.header{
+.header {
     background-color: midnightblue;
     height: 10%;
 }
@@ -36,7 +36,6 @@ i {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    height:100vh;
+    height: 100vh;
     width: 100vh;
 }
-

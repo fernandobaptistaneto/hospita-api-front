@@ -11,6 +11,7 @@
     </button>
     <span class="spacer"></span>
     <span class="header-text">My Fusion</span>
+    <span class="spacerUser"></span>
   </mat-toolbar-row>
 </mat-toolbar>
 
@@ -18,17 +19,18 @@
 <mat-sidenav-container fxFlexFill class="container">
   <mat-sidenav #sidenav mode="side" opened>
     <mat-nav-list>
-      <a routerLink="" mat-list-item>
+      <a (click)="sidenav.toggle()" routerLink="" mat-list-item>
         <mat-icon>home</mat-icon>
         Home
       </a>
+      <a (click)="sidenav.toggle()" routerLink="/usuarios" mat-list-item>
+        <mat-icon>perm_identity</mat-icon>
+        Usuarios</a
+      >
       <a href="#" mat-list-item>
-        <mat-icon>assignment</mat-icon>
-        Autorizações</a>
-        <a href="#" mat-list-item>
-          <mat-icon>paid</mat-icon>
-          Repasse Médico
-        </a>  
+        <mat-icon>paid</mat-icon>
+        Repasse Médico
+      </a>
     </mat-nav-list>
   </mat-sidenav>
 
@@ -36,5 +38,4 @@
   <mat-sidenav-content fxFlexFill>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
-  
 </mat-sidenav-container>
