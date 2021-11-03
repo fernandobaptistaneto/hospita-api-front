@@ -11,7 +11,7 @@ export class UsuarioReadComponent implements OnInit {
 
   usuarios: Usuario[] = []
 
-  displayedColumns: string[] = ['id', 'username', 'situacao', 'acoes'];
+  displayedColumns: string[] = ['id', 'username', 'situacao', 'perfil', 'acoes'];
 
   constructor(private service: UsuarioService) { }
 
