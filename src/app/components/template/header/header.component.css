@@ -2,7 +2,7 @@
     padding: 0.3rem;
 }
 
-.toggle-button {
+.toggle-buttom {
     display: flex;
     min-width: 35px;
     min-height: 35px;
@@ -14,14 +14,18 @@
 }
 
 .header {
-    background-color: midnightblue;
+    --background-color: midnightblue;
+    background-image: linear-gradient(to right top, #011764, #021771, #07177d, #10168a, #1a1396);
     height: 10%;
 }
 
 .container {
     height: 85%;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+  
+    
 }
+
+
 
 i {
     padding-right: 0.6rem;

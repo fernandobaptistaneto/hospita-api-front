@@ -18,6 +18,16 @@ import {MatCardModule} from '@angular/material/card';
 import { UsuarioReadComponent } from './components/views/usuario/usuario-read/usuario-read.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
+import { UsuarioCreateComponent } from './components/views/usuario/usuario-create/usuario-create.component';
+import {FormsModule} from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { LoginComponent } from './components/template/login/login.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatDialogModule} from '@angular/material/dialog';
+import { UsuarioReadDialogComponent } from './components/views/usuario/usuario-read/usuario-read-dialog/usuario-read-dialog/usuario-read-dialog.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -26,7 +36,10 @@ import {MatButtonModule} from '@angular/material/button';
     FooterComponent,
     NavComponent,
     HomeComponent,
-    UsuarioReadComponent
+    UsuarioReadComponent,
+    UsuarioCreateComponent,
+    LoginComponent,
+    UsuarioReadDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +52,14 @@ import {MatButtonModule} from '@angular/material/button';
     MatCardModule,
     MatTableModule,
     HttpClientModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSlideToggleModule,
+    MatProgressSpinnerModule,
+    MatDialogModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

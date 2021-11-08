@@ -1,0 +1,21 @@
+<form>
+  <h1>Novo Usuário</h1>
+
+  <mat-form-field class="form">
+    <mat-label>Username</mat-label>
+    <input matInput [(ngModel)]="usuario.username" type="text" name="username" />
+  </mat-form-field>
+  <mat-form-field class="form">
+    <mat-label>Password</mat-label>
+    <input matInput [(ngModel)]="usuario.password"  type="password" name="password" />
+  </mat-form-field>
+
+  <div class="slide">
+    Situação: 
+    <mat-slide-toggle name="situacao" [(ngModel)]="isChecked" (click)="verificaSituacao()" name="situacao"> <a class="{{situacaoTexto}}">{{situacaoTexto}}</a></mat-slide-toggle>
+  </div>
+  <div class="buttons">
+    <button (click)="create()" class="criarUsuario" mat-raised-button>Criar</button>
+    <button class="cancelarUsuario" mat-raised-button>Cancelar</button>
+  </div>
+</form>

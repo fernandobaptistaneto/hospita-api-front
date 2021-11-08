@@ -1,5 +1,6 @@
 export interface Usuario{
     id?: String,
     username: String,
-    situacao: String;
+    password: String,
+    situacao: String
 }

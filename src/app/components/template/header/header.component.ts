@@ -1,3 +1,4 @@
+import { UsuarioCreateComponent } from './../../views/usuario/usuario-create/usuario-create.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

@@ -4,6 +4,7 @@
     justify-content: flex-end;
     font-size: 0.8rem;
     height: 5%;
-    background-color: midnightblue;
+    --background-color: midnightblue;
+    background-image: linear-gradient(to right top, #011764, #021771, #07177d, #10168a, #1a1396);
     color: white;
 }

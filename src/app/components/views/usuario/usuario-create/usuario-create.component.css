@@ -1,0 +1,52 @@
+form{
+    text-align: center;
+    width: 70%;
+    margin: 2rem auto 0 auto;
+
+}
+
+.criarUsuario {
+    color: white;
+    background-image: linear-gradient(to right top, #011764, #021771, #07177d, #10168a, #1a1396);
+    margin-bottom: 1rem;
+}
+
+.slide{
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    text-align: start;
+}
+
+.Ativo{
+    color: green;
+    font-weight: 800;
+
+}
+
+.Inativo{
+    color: red;
+    font-weight: 800;
+}
+
+.cancelarUsuario{
+    color: white;
+    background-color: rgb(172, 4, 4);
+    margin-bottom: 1rem;
+}
+
+.form{
+    width: 100%;
+}
+
+.buttons{
+    width: 100%;
+    text-align: start;
+}
+
+button{
+    margin-right: .5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    min-width: 120px;
+}
+

@@ -17,12 +17,13 @@
 
 <!--MENU-->
 <mat-sidenav-container fxFlexFill class="container">
-  <mat-sidenav #sidenav mode="side" opened>
+  <mat-sidenav class="sidenav" #sidenav mode="side" opened>
     <mat-nav-list>
       <a (click)="sidenav.toggle()" routerLink="" mat-list-item>
         <mat-icon>home</mat-icon>
         Home
       </a>
+      
       <a (click)="sidenav.toggle()" routerLink="/usuarios" mat-list-item>
         <mat-icon>perm_identity</mat-icon>
         Usuarios</a

@@ -17,12 +17,13 @@
 
 .criarUsuario {
     color: white;
-    background-color: midnightblue;
+    background-image: linear-gradient(to right top, #011764, #021771, #07177d, #10168a, #1a1396);
     margin-bottom: 1rem;
 }
 
 .table {
     width: 100%;
+    
 }
 
 .perfil {
@@ -42,3 +43,14 @@
 .mat-header {
     width: 5rem;
 }
+
+.mat-row .mat-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+  }
+  
+  .mat-row:hover .mat-cell {
+    border-color: midnightblue;
+    background-image: linear-gradient(to right top, #5376ff, #5376ff, #5376ff, #5376ff, #5376ff);
+  }
