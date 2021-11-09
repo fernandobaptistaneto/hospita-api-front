@@ -1,6 +1,6 @@
-import { UsuarioService } from './../usuario.service';
+import { UsuarioService } from '../service/usuario.service';
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from '../usuario.model';
+import { Usuario } from '../model/usuario.model';
 
 
 @Component({
@@ -32,7 +32,7 @@ export class UsuarioCreateComponent implements OnInit {
       console.log(this.situacaoValor)
       console.log(this.situacaoTexto)
       console.log(this.isChecked)
-    })
+    });
   }
 
   verificaSituacao() : string{
@@ -46,7 +46,5 @@ export class UsuarioCreateComponent implements OnInit {
     console.log(this.isChecked);
     return this.situacaoValor
   }
-
-  
 
 }

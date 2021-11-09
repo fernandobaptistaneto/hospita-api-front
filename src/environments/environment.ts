@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  //baseUrl: 'http://localhost:8080/'
-  baseUrl: 'https://myhospital-api.herokuapp.com/'
+  baseUrl: 'http://localhost:8080'
+  //baseUrl: 'https://myhospital-api.herokuapp.com/'
 };
 
 /*

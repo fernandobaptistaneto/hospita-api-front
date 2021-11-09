@@ -8,19 +8,19 @@
           <tr>
             <td>
               <mat-form-field class="example-full-width">
-              <input matInput placeholder="Username" name="username" required>
+              <input matInput placeholder="Username" [(ngModel)]="usuario.username" name="username" required>
               </mat-form-field>
             </td>
           </tr>
           <tr>
           <td><mat-form-field class="example-full-width">
-            <input matInput placeholder="Password" type="password" name="password" required>
+            <input matInput placeholder="Password" [(ngModel)]="usuario.password" type="password" name="password" required>
           </mat-form-field></td>
         </tr></table>
       </form>
       
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary">Login</button>
+      <button mat-raised-button color="primary" (click)="login();">Login</button>
     </mat-card-actions>
   </mat-card>

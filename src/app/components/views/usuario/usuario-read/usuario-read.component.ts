@@ -1,7 +1,8 @@
+import { LoginService } from './../service/login.service';
 import { Component, OnInit } from '@angular/core';
-import { UsuarioService } from '../usuario.service';
+import { UsuarioService } from '../service/usuario.service';
 import { Router } from '@angular/router';
-import { Usuario } from '../usuario.model';
+import { Usuario } from '../model/usuario.model';
 import { UsuarioReadDialogComponent } from './usuario-read-dialog/usuario-read-dialog/usuario-read-dialog.component';
 import {  MatDialog } from '@angular/material/dialog';
 
@@ -17,7 +18,7 @@ export class UsuarioReadComponent implements OnInit {
   clickedRows = new Set<Usuario>();
   public usuarioClick!: Usuario;
 
-  constructor(private service: UsuarioService, private router: Router, public dialog: MatDialog) { }
+  constructor(private service: UsuarioService, private router: Router, public dialog: MatDialog, private loginService:LoginService) { }
 
   ngOnInit(): void {
     this.findAll();

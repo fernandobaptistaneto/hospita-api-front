@@ -1,8 +1,9 @@
+import { LoginService } from './login.service';
 import { environment } from 'src/environments/environment';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Usuario } from './usuario.model';
+import { Usuario } from '../model/usuario.model';
 
 
 @Injectable({
@@ -16,12 +17,12 @@ export class UsuarioService {
   
 
   findAll():Observable<Usuario[]>{
-    const url = `${this.baseUrl}/usuarios`
+    const url = `${this.baseUrl}/usuarios/listarTodosUsuarios`
     return this.http.get<Usuario[]>(url)
   }
 
   create(usuario: Usuario): Observable<Usuario>{
-    const url = `${this.baseUrl}/usuarios`
+    const url = `${this.baseUrl}/usuarios/createUsuario`
     return this.http.post<Usuario>(url, usuario);
   }
 
