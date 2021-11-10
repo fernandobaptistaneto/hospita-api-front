@@ -1,3 +1,4 @@
+import { LoginService } from './../../views/usuario/service/login.service';
 import { UsuarioCreateComponent } from './../../views/usuario/usuario-create/usuario-create.component';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private loginService: LoginService) { }
 
   ngOnInit(): void {
+  }
+
+  logout(){
+    this.loginService.logout();
   }
 
 }

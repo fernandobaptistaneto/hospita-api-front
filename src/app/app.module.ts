@@ -29,6 +29,10 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatDialogModule} from '@angular/material/dialog';
 import { UsuarioReadDialogComponent } from './components/views/usuario/usuario-read/usuario-read-dialog/usuario-read-dialog/usuario-read-dialog.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { LoginAlertComponent } from './components/template/login/Alertas/login-alert/login-alert.component';
+import {MatMenuModule} from '@angular/material/menu';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +44,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     UsuarioReadComponent,
     UsuarioCreateComponent,
     LoginComponent,
-    UsuarioReadDialogComponent
+    UsuarioReadDialogComponent,
+    LoginAlertComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +65,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatSlideToggleModule,
     MatProgressSpinnerModule,
     MatDialogModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSnackBarModule,
+    MatMenuModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true}

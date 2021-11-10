@@ -12,6 +12,22 @@
     <span class="spacer"></span>
     <span class="header-text">My Fusion</span>
     <span class="spacerUser"></span>
+    
+
+      <button class="user-div" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon class="user-icon">account_circle</mat-icon>
+      </button>
+      <mat-menu  #menu="matMenu" >
+        <button class="mat-menu-item" mat-menu-item>
+          <mat-icon>security icon</mat-icon>
+          <span>Alterar Senha</span>
+        </button>
+        <button mat-menu-item (click)="logout();">
+          <mat-icon>power_settings_new</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+
   </mat-toolbar-row>
 </mat-toolbar>
 
@@ -23,9 +39,9 @@
         <mat-icon>home</mat-icon>
         Home
       </a>
-      
+
       <a (click)="sidenav.toggle()" routerLink="/usuarios" mat-list-item>
-        <mat-icon>perm_identity</mat-icon>
+        <mat-icon>group</mat-icon>
         Usuarios</a
       >
       <a href="#" mat-list-item>

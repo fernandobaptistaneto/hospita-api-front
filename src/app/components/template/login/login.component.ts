@@ -1,6 +1,8 @@
 import { LoginService } from './../../views/usuario/service/login.service';
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../../views/usuario/model/usuario.model';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { LoginAlertComponent } from './Alertas/login-alert/login-alert.component';
 
 @Component({
   selector: 'app-login',
@@ -8,16 +10,14 @@ import { Usuario } from '../../views/usuario/model/usuario.model';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  durationInSeconds = 2;
   usuario: Usuario ={
     username: '',
     password: '',
     situacao: ''
   }
 
-  response:any;
-
-  constructor(private loginService: LoginService) { }
+  constructor(private loginService: LoginService, private _snackBar: MatSnackBar) { }
 
 
   ngOnInit(): void {
@@ -26,10 +26,16 @@ export class LoginComponent implements OnInit {
 
   public login(){
     this.loginService.login(this.usuario);
+    this._snackBar.openFromComponent(LoginAlertComponent, {
+      duration: this.durationInSeconds * 1000,
+    });
   }
 
-  public logout(){
-    this.logout();
+  public logout() : void{
+    this.loginService.logout();
   }
 
 }
+
+
+

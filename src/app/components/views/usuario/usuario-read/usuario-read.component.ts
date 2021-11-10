@@ -32,7 +32,7 @@ export class UsuarioReadComponent implements OnInit {
   }
 
   navegarParaUsuarioCreate(){
-    this.router.navigate(["usuarios/create"])
+    this.router.navigate(["usuarios/create"]);
   }
 
   editarUsuario(usuario:Usuario): void{
@@ -48,5 +48,4 @@ export class UsuarioReadComponent implements OnInit {
       data: usuario
     });
   }
-
 }

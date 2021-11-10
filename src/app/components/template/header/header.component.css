@@ -43,3 +43,18 @@ i {
     height: 100vh;
     width: 100vh;
 }
+
+.user-div{
+    
+    min-width: 0px;
+    position:absolute;
+    right: 70px;
+}
+
+.user-icon{
+    transform: scale(1.4);
+}
+
+.mat-menu-item{
+    align-items: center;
+}
