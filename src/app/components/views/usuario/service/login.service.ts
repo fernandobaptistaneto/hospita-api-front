@@ -16,9 +16,6 @@ export class LoginService {
 
       /*Retorno HTTP*/
       var token = JSON.parse(JSON.stringify(data)).Authorization;
-      let tokenStr = 'Bearer '+token;
-      const header = new HttpHeaders().set("Authorization", tokenStr);
-      header.set('Authorization', tokenStr);
       localStorage.setItem("token", token);
       window.sessionStorage.setItem("token", token);
       console.info("TOKEN: ",localStorage.getItem("token"));
@@ -28,6 +25,11 @@ export class LoginService {
         console.error("Erro ao fazer login")
       }
     );
+  }
+
+  logout(): void{
+    localStorage.removeItem("token");
+    window.sessionStorage.removeItem("token");
   }
 
 }
