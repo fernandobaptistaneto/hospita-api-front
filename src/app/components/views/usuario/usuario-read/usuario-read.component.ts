@@ -23,10 +23,10 @@ export class UsuarioReadComponent implements OnInit {
   ngOnInit(): void {
     this.findAll();
   }
+  
 
   findAll(){
     this.service.findAll().subscribe(resposta => {
-      console.log(resposta);
       this.usuarios = resposta;
     });
   }
@@ -36,7 +36,7 @@ export class UsuarioReadComponent implements OnInit {
   }
 
   editarUsuario(usuario:Usuario): void{
-    console.log(usuario.username);
+    console.log(usuario.nome);
   }
 
   

@@ -1,3 +1,4 @@
+import { FooterComponent } from './components/template/footer/footer.component';
 import { HeaderComponent } from './components/template/header/header.component';
 import { UsuarioReadComponent } from './components/views/usuario/usuario-read/usuario-read.component';
 import { NgModule, Component } from '@angular/core';
@@ -23,6 +24,7 @@ const routes: Routes = [
   component: LoginComponent,
   children: [
     {path: '', redirectTo: 'login', pathMatch: 'full' },
+    {path: 'home', redirectTo: 'login', pathMatch: 'full' },
     {path: 'login', component: LoginComponent }
   ]
 }

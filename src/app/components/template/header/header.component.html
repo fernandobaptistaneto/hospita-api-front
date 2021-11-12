@@ -11,17 +11,23 @@
     </button>
     <span class="spacer"></span>
     <span class="header-text">My Fusion</span>
-    <span class="spacerUser"></span>
-    
+    <span class="spacerUser"></span> 
 
+    <! --- USUARIO AVATAR --->
       <button class="user-div" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
         <mat-icon class="user-icon">account_circle</mat-icon>
       </button>
-      <mat-menu  #menu="matMenu" >
+      <mat-menu  #menu="matMenu">
+        <div class="mat-menu-item">
+          <mat-icon>person</mat-icon>
+          <span>{{usuarioLogado()}}</span>
+        </div>     
+        <mat-divider></mat-divider>
         <button class="mat-menu-item" mat-menu-item>
           <mat-icon>security icon</mat-icon>
           <span>Alterar Senha</span>
         </button>
+        <mat-divider></mat-divider>
         <button mat-menu-item (click)="logout();">
           <mat-icon>power_settings_new</mat-icon>
           <span>Logout</span>
@@ -35,19 +41,30 @@
 <mat-sidenav-container fxFlexFill class="container">
   <mat-sidenav class="sidenav" #sidenav mode="side" opened>
     <mat-nav-list>
-      <a (click)="sidenav.toggle()" routerLink="" mat-list-item>
+      <mat-list-item *ngIf="verificaMenu(0);" (click)="sidenav.toggle()" routerLink="" mat-list-item>
         <mat-icon>home</mat-icon>
+        <span class="menu-span"> 
         Home
-      </a>
+      </span>
+      </mat-list-item>
 
-      <a (click)="sidenav.toggle()" routerLink="/usuarios" mat-list-item>
+    <mat-divider></mat-divider>
+
+    <mat-list-item *ngIf="verificaMenu(2);" (click)="sidenav.toggle()" routerLink="/usuarios" mat-list-item>
         <mat-icon>group</mat-icon>
-        Usuarios</a
-      >
-      <a href="#" mat-list-item>
+        <span class="menu-span"> 
+        Usuarios</span>
+    </mat-list-item>
+
+    <mat-divider></mat-divider>
+
+    <mat-list-item *ngIf="verificaMenu(1);" href="#" mat-list-item>
         <mat-icon>paid</mat-icon>
+        <span class="menu-span">
         Repasse Médico
-      </a>
+      </span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
     </mat-nav-list>
   </mat-sidenav>
 
@@ -56,3 +73,6 @@
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
+
+<app-footer></app-footer>

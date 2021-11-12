@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { UsuarioService } from '../service/usuario.service';
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../model/usuario.model';
@@ -19,7 +20,7 @@ export class UsuarioCreateComponent implements OnInit {
     situacao: ''
   }
 
-  constructor(private service: UsuarioService) {
+  constructor(private service: UsuarioService, private router: Router) {
 
   }
 
@@ -29,10 +30,13 @@ export class UsuarioCreateComponent implements OnInit {
   create(): void{
     this.usuario.situacao = this.verificaSituacao();
     this.service.create(this.usuario).subscribe((resposta) =>{
-      console.log(this.situacaoValor)
-      console.log(this.situacaoTexto)
-      console.log(this.isChecked)
-    });
+      this.service.mensagem('Usuário criado com sucesso!');
+      this.router.navigate(['/usuarios']);
+    }, err => {
+      for(let i = 0; i < err.error.errors.length; i++){
+        this.service.mensagem(err.error.errors[i].message);
+      }
+    })
   }
 
   verificaSituacao() : string{
@@ -45,6 +49,10 @@ export class UsuarioCreateComponent implements OnInit {
     }
     console.log(this.isChecked);
     return this.situacaoValor
+  }
+
+  cancel():void {
+    this.router.navigate(['usuarios']);
   }
 
 }

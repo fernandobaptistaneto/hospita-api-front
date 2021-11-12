@@ -32,6 +32,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { LoginAlertComponent } from './components/template/login/Alertas/login-alert/login-alert.component';
 import {MatMenuModule} from '@angular/material/menu';
+import { LoginAlertErrorComponent } from './components/template/login/Alertas/login-alert-error/login-alert-error/login-alert-error.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import {MatMenuModule} from '@angular/material/menu';
     UsuarioCreateComponent,
     LoginComponent,
     UsuarioReadDialogComponent,
-    LoginAlertComponent
+    LoginAlertComponent,
+    LoginAlertErrorComponent
   ],
   imports: [
     BrowserModule,

@@ -1,12 +1,41 @@
-.example-card{
+.loginBox {
+    max-width: 85%;
     width: 500px;
-    height: 500px;
-    margin: 0 auto;
-    margin-top: 200px;
+    display: table;
+    margin: auto auto;
+  }
+  
+  .stretch input  {
+    width: 100%
+  }
 
-}
+  .mat-toolbar{
+    background-image: linear-gradient(to left bottom, #293240, #293649, #283952, #273d5c, #254165);
+  }
 
-.titulo{
-    font-size: xx-large;
-    text-align: center;
-}
+  .tit{
+      color: white;
+      font-size: 20px;
+  }
+
+  .login-container{
+    width: 95%;
+    padding-top: 35%;
+  }
+
+  .btnEntrar{
+    background-image: linear-gradient(to left bottom, #293240, #293649, #283952, #273d5c, #254165);
+      color: white;
+      left: 0%;
+      min-width: 40%;
+      bottom: 5px;
+  }
+
+ 
+  .input-password{
+    width: 100%
+  }
+
+  .input-username{
+    width: 100%
+  }

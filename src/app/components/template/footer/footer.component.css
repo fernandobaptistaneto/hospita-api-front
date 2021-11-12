@@ -5,6 +5,8 @@
     font-size: 0.8rem;
     height: 5%;
     --background-color: midnightblue;
-    background-image: linear-gradient(to right top, #011764, #021771, #07177d, #10168a, #1a1396);
+    --background-image: linear-gradient(to right top, #011764, #021771, #07177d, #10168a, #1a1396);
+    --background-color: #232121;
+    background-image: linear-gradient(to left bottom, #293240, #293649, #283952, #273d5c, #254165);
     color: white;
 }
