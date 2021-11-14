@@ -1,11 +1,15 @@
 <div mat-dialog-content>
     <mat-form-field>
-      <input matInput  placeholder="Nome">
+      <input matInput  placeholder="Nome" [(ngModel)]="data.nome">
     </mat-form-field>
     <mat-form-field>
       <input matInput [(ngModel)]="data.username" placeholder="Usuário">
     </mat-form-field>
     <section class="example-section">
-      <mat-checkbox class="example-margin" >Ativo</mat-checkbox>
+      <mat-checkbox class="{{this.dialogoSituacao}}" [(ngModel)]="this.situacaoUsuario">{{dialogoSituacao}}</mat-checkbox>
     </section>
+    <div class="buttons">
+      <button  class="criarUsuario" class="salvar" mat-raised-button>Salvar</button>
+      <button  class="cancelarUsuario" class="sair" mat-raised-button  mat-dialog-close>Sair</button>
+    </div>
   </div>

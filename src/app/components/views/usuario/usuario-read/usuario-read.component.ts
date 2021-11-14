@@ -45,7 +45,8 @@ export class UsuarioReadComponent implements OnInit {
     const dialogRef = this.dialog.open(UsuarioReadDialogComponent, {
       height: '400px',
       width: '400px',
-      data: usuario
+      data: usuario,
+      disableClose: true
     });
   }
 }

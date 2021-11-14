@@ -11,12 +11,27 @@ import { Usuario } from '../../../model/usuario.model';
 })
 export class UsuarioReadDialogComponent implements OnInit {
 
+  situacaoUsuario: boolean = false;
+  dialogoSituacao: any;
+
   constructor(public dialogRef: MatDialogRef<UsuarioReadDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Usuario) { 
+      this.verificaSituacao();
+      console.log(this.situacaoUsuario);
+    }
 
+    verificaSituacao(){
+      if(this.data.situacao === 'A'){
+        this.situacaoUsuario = true;
+        this.dialogoSituacao = "Ativo";
+      }else{
+        this.situacaoUsuario = false;
+        this.dialogoSituacao = "Inativo";
+      }
     }
 
   ngOnInit(): void {
+    
   }
 
 }

@@ -1,7 +1,9 @@
+import { UsuarioService } from './../../views/usuario/service/usuario.service';
 import {LoginService} from './../../views/usuario/service/login.service';
 import {UsuarioCreateComponent} from './../../views/usuario/usuario-create/usuario-create.component';
 import {Component, OnInit} from '@angular/core';
 import {MatDividerModule} from '@angular/material/divider';
+import { Usuario } from '../../views/usuario/model/usuario.model';
 
 @Component({selector: 'app-header', templateUrl: './header.component.html', styleUrls: ['./header.component.css']})
 export class HeaderComponent implements OnInit {
@@ -13,14 +15,12 @@ export class HeaderComponent implements OnInit {
         true, /*Repasse*/
         true /*Usuarios*/
     ];
+    public usuarioLogado: any
 
-    constructor(private loginService : LoginService) {}
+    constructor(private loginService : LoginService, private usuarioService: UsuarioService) {}
 
-    ngOnInit(): void {}
-
-    usuarioLogado(): any{
-        var login;
-        return  login = window.localStorage.getItem('nome');
+    ngOnInit(): void {
+       this.findByUsername();
     }
 
     verificaMenu(id : number): boolean {
@@ -31,6 +31,14 @@ export class HeaderComponent implements OnInit {
         }
 
     }
+
+    findByUsername(){
+        this.usuarioService.findByUsername(localStorage.getItem('username')).subscribe(resposta => {
+          this.usuarioLogado = resposta;
+          console.info(this.usuarioLogado)
+        });
+    }
+
 
     logout() {
         this.loginService.logout();

@@ -11,6 +11,7 @@ export class LoginComponent implements OnInit {
         password: '',
         situacao: ''
     }
+    hide = true;
 
     constructor(private loginService : LoginService, private _snackBar : MatSnackBar) {}
 
@@ -18,9 +19,7 @@ export class LoginComponent implements OnInit {
     ngOnInit(): void {}
 
     public login() {
-
         this.loginService.login(this.usuario);
-
     }
 
     public logout(): void {

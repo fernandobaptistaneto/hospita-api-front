@@ -12,21 +12,32 @@
         <tr>
           <td>
             <div class="input-username">
-            <mat-form-field class="example-full-width">
-            <input matInput placeholder="Username" [(ngModel)]="usuario.username" name="username" required>
-            </mat-form-field>
+              <p>
+                <mat-form-field appearance="outline">
+                  <mat-label>Login</mat-label>
+                  <input matInput [(ngModel)]="usuario.username" name="username" required>
+                  <mat-icon matSuffix >person</mat-icon>
+                </mat-form-field>
+              </p>
           </div>
           </td>
         </tr>
         <tr>
         <td>
           <div class="input-password">
-          <mat-form-field class="mat-form-fieldd">
-          <input matInput placeholder="Password" [(ngModel)]="usuario.password" type="password" name="password" required>
-        </mat-form-field>
+            <p>
+              <mat-form-field appearance="outline">
+                <mat-label>Senha</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" [attr.aria-pressed]="hide" [(ngModel)]="usuario.password"  name="password" required>
+                <mat-icon matSuffix (click)="hide = !hide" [attr.aria-pressed]="hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </mat-form-field>
+            </p>
+        
       </div></td>
       </tr></table>
     </form>
+
+
     
   </mat-card-content>
   

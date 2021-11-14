@@ -18,9 +18,9 @@
         <mat-icon class="user-icon">account_circle</mat-icon>
       </button>
       <mat-menu  #menu="matMenu">
-        <div class="mat-menu-item">
-          <mat-icon>person</mat-icon>
-          <span>{{usuarioLogado()}}</span>
+        <div class="mat-menu-item" style="pointer-events: none; color: green;padding-top: 0;" >
+          <mat-icon style="color: green;">person</mat-icon>
+          <span>Usuario: {{usuarioLogado?.nome}}</span>
         </div>     
         <mat-divider></mat-divider>
         <button class="mat-menu-item" mat-menu-item>
@@ -65,6 +65,15 @@
       </span>
     </mat-list-item>
     <mat-divider></mat-divider>
+
+    <mat-list-item *ngIf="verificaMenu(0);" (click)="sidenav.toggle()" routerLink="/perfis" mat-list-item>
+      <mat-icon>recent_actors</mat-icon>
+      <span class="menu-span"> 
+      Perfis
+    </span>
+    </mat-list-item>
+
+  <mat-divider></mat-divider>
     </mat-nav-list>
   </mat-sidenav>
 

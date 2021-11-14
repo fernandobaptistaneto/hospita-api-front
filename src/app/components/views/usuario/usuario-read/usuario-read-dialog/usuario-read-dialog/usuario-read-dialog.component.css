@@ -1,0 +1,32 @@
+.Ativo{
+    color: green;
+}
+
+.Inativo{
+    color:red;
+}
+
+.buttons{
+    width: 100%;
+    text-align: start;
+}
+
+button{
+    margin-right: .5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-top: 2rem;
+    min-width: 120px;
+}
+
+.sair{
+    color: white;
+    background-color: rgb(172, 4, 4);
+    margin-bottom: 1rem;
+}
+
+.salvar {
+    color: white;
+    background-image: linear-gradient(to right top, #011764, #021771, #07177d, #10168a, #1a1396);
+    margin-bottom: 1rem;
+}

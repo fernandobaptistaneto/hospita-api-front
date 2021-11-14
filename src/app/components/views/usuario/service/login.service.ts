@@ -17,8 +17,6 @@ export class LoginService {
 
   durationInSeconds = 2;
   USER_NAME_SESSION_ATTRIBUTE_NAME = 'username'
-  usuarioLogado: Usuario[] = []
-  usuarioTeste: any;
   
 
   constructor(private http: HttpClient, private router: Router, private _snackBar : MatSnackBar, private service: UsuarioService) { }
@@ -33,7 +31,7 @@ export class LoginService {
       this.router.navigate(['']);
       
       //Recebe os dados do usuário logado
-      this.findByUsername(localStorage.getItem('username'));
+      
 
       //Alerta login efetuado com sucesso
       this.alerta(LoginAlertComponent, 2);
@@ -62,11 +60,4 @@ export class LoginService {
       duration: durationInSeconds * 1000
   });
   }
-
-  findByUsername(username:any){
-    this.service.findByUsername(username).subscribe(resposta => {
-      this.usuarioTeste = resposta;
-    });
-  }
-
 }
