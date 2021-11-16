@@ -30,8 +30,6 @@ export class LoginService {
       this.registerSuccessfulLogin(usuario.username);
       this.router.navigate(['']);
       
-      //Recebe os dados do usuário logado
-      
 
       //Alerta login efetuado com sucesso
       this.alerta(LoginAlertComponent, 2);

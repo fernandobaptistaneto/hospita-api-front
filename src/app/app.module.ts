@@ -33,6 +33,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { LoginAlertComponent } from './components/template/login/Alertas/login-alert/login-alert.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { LoginAlertErrorComponent } from './components/template/login/Alertas/login-alert-error/login-alert-error/login-alert-error.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 @NgModule({
@@ -69,7 +70,8 @@ import { LoginAlertErrorComponent } from './components/template/login/Alertas/lo
     MatDialogModule,
     MatCheckboxModule,
     MatSnackBarModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTabsModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true}

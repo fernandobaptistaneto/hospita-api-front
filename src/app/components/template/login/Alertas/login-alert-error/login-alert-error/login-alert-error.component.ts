@@ -10,6 +10,7 @@ export class LoginAlertErrorComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

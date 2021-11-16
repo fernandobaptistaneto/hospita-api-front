@@ -38,8 +38,17 @@
 </mat-toolbar>
 
 <!--MENU-->
+
 <mat-sidenav-container fxFlexFill class="container">
+  
+  
   <mat-sidenav class="sidenav" #sidenav mode="side" opened>
+
+    <!--INICIO TAB-->
+    <mat-tab-group animationDuration="0ms">
+      <!--PRIMEIRO TAB MENU-->
+      <mat-tab label="Menu" class="tab-menu">
+    
     <mat-nav-list>
       <mat-list-item *ngIf="verificaMenu(0);" (click)="sidenav.toggle()" routerLink="" mat-list-item>
         <mat-icon>home</mat-icon>
@@ -75,7 +84,22 @@
 
   <mat-divider></mat-divider>
     </mat-nav-list>
+  </mat-tab>
+  <!--SEGUNDA LABEL TAB PERFIS-->
+    <mat-tab label="Perfis">
+      <mat-selection-list #shoes [multiple]="false">
+        <mat-list-option  >
+
+        </mat-list-option>
+      </mat-selection-list>
+      
+      <p>
+        Option selected: {{shoes.selectedOptions.selected[0]?.value}}
+      </p>
+    </mat-tab>
+  </mat-tab-group>
   </mat-sidenav>
+  
 
   <!--Corpo NAV-->
   <mat-sidenav-content fxFlexFill>
